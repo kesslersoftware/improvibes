@@ -1,4 +1,4 @@
-package com.improvibes
+package com.kesslersoftware.improvlab;
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

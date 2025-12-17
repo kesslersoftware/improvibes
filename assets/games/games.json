@@ -1,0 +1,36 @@
+{
+  "games" : [
+    {
+      "2 person scenario" : {
+        "playerNum" : "2",
+        "length" : "2 to 4 minutes",
+        "wordRequired" : "yes",
+        "rules" : "players ask the audience for a word. when given the word, they then proceed to act out a scene until the timer expires"
+      }
+    },
+    {
+      "3 person scenario" : {
+        "playerNum": "3",
+        "length": "2 to 4 minutes",
+        "wordRequired" : "yes",
+        "rules": "players ask the audience for a word. when given the word, they then proceed to act out a scene until the timer expires"
+      }
+    },
+    {
+      "tagouts" : {
+        "playerNum" : "any",
+        "length" : "2 to 10 minutes",
+        "wordRequired" : "yes",
+        "rules" : "tag people out when you want to enter a scene"
+      }
+    },
+    {
+      "numbers game" : {
+        "playerNum" : "3",
+        "length" : "3-5 minutes",
+        "wordRequired" : "yes",
+        "rules" : "the audience assigns a number to each of the 3 players. each player can only speak in sentences that have the same number of words as the number they were assigned. then the audience suggests a word, and players act out a scene until time is up"
+      }
+    }
+  ]
+}

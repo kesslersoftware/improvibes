@@ -1,0 +1,311 @@
+A S&M leather boutique fitting nook
+A backstage dressing room
+A barber chair
+A bike repair stand
+A bodega aisle
+A bowling alley ball return area
+A break room kitchenette
+A brewery tap station
+A bus driver seat
+A bus stop shelter
+A butcher counter
+A candle shop counter
+A ceramics studio wheel
+A cheese sampling counter
+A chocolatier workstation
+A church pew
+A cobblers bench
+A cockpit of a small plane
+A coffee shop table
+A comic shop checkout counter
+A compact archive room table
+A compact coat check station
+A compact front desk
+A compact garden patio
+A compact kitchen corner
+A compact lobby corner
+A compact mailroom desk
+A compact office cubicle
+A compact reception desk
+A compact repair counter
+A compact security station
+A compact shipping counter
+A compact side alley stall
+A compact snack bar counter
+A compact storage nook
+A compact studio corner
+A compact supply station
+A compact ticket window
+A compact training room desk
+A compact waiting room
+A compact workbench
+A confessional booth
+A cozy archive room table
+A cozy coat check station
+A cozy front desk
+A cozy garden patio
+A cozy kitchen corner
+A cozy lobby corner
+A cozy mailroom desk
+A cozy office cubicle
+A cozy reception desk
+A cozy repair counter
+A cozy security station
+A cozy shipping counter
+A cozy side alley stall
+A cozy snack bar counter
+A cozy storage nook
+A cozy studio corner
+A cozy supply station
+A cozy ticket window
+A cozy training room desk
+A cozy waiting room
+A cozy workbench
+A crowded archive room table
+A crowded coat check station
+A crowded front desk
+A crowded garden patio
+A crowded kitchen corner
+A crowded lobby corner
+A crowded mailroom desk
+A crowded office cubicle
+A crowded reception desk
+A crowded repair counter
+A crowded security station
+A crowded shipping counter
+A crowded side alley stall
+A crowded snack bar counter
+A crowded storage nook
+A crowded studio corner
+A crowded supply station
+A crowded ticket window
+A crowded training room desk
+A crowded waiting room
+A crowded workbench
+A deli counter
+A dentist's office
+A doctor's exam room
+A donut shop counter
+A drum lesson studio
+A farm stand
+A ferry ticket counter
+A fire station gear rack
+A florist workbench
+A gaming store tournament table
+A garage workbench
+A garden shed
+A greenhouse corner
+A grocery checkout lane
+A guitar tuning bench
+A gym check‑in desk
+A hardware store key‑cutting counter
+A hobby shop model table
+A hospital triage station
+A hotel concierge desk
+A hotel luggage cart area
+A janitor’s closet
+A karaoke booth
+A kayak rental shack
+A kindergarten reading corner
+A kitchen prep station
+A laser tag staging room
+A laundromat corner
+A library circulation desk
+A locker room bench
+A magic shop demonstration table
+A mail sorting table
+A mailbox rental wall
+A marina dock slip
+A massage therapy room
+A mechanic’s bay
+A mini‑golf putting hole
+A movie theater ticket kiosk
+A museum information desk
+A narrow archive room table
+A narrow coat check station
+A narrow front desk
+A narrow garden patio
+A narrow kitchen corner
+A narrow lobby corner
+A narrow mailroom desk
+A narrow office cubicle
+A narrow reception desk
+A narrow repair counter
+A narrow security station
+A narrow shipping counter
+A narrow side alley stall
+A narrow snack bar counter
+A narrow storage nook
+A narrow studio corner
+A narrow supply station
+A narrow ticket window
+A narrow training room desk
+A narrow waiting room
+A narrow workbench
+A new archive room table
+A new coat check station
+A new front desk
+A new garden patio
+A new kitchen corner
+A new lobby corner
+A new mailroom desk
+A new office cubicle
+A new reception desk
+A new repair counter
+A new security station
+A new shipping counter
+A new side alley stall
+A new snack bar counter
+A new storage nook
+A new studio corner
+A new supply station
+A new ticket window
+A new training room desk
+A new waiting room
+A new workbench
+A newsstand
+A paint mixing station
+A park bench
+A pawn shop counter
+A pet shop grooming area
+A pharmacy drop‑off counter
+A photo booth
+A photo processing counter
+A piercing booth
+A pizza shop counter
+A planetarium control console
+A police station front desk
+A quiet archive room table
+A quiet coat check station
+A quiet front desk
+A quiet garden patio
+A quiet kitchen corner
+A quiet lobby corner
+A quiet mailroom desk
+A quiet monastery study desk
+A quiet office cubicle
+A quiet reception desk
+A quiet repair counter
+A quiet security station
+A quiet shipping counter
+A quiet side alley stall
+A quiet snack bar counter
+A quiet storage nook
+A quiet studio corner
+A quiet supply station
+A quiet ticket window
+A quiet training room desk
+A quiet waiting room
+A quiet workbench
+A radio booth
+A recording studio booth
+A science lab workstation
+A seamstress workstation
+A security guard booth
+A small archive room table
+A small coat check station
+A small front desk
+A small garden patio
+A small kitchen corner
+A small lobby corner
+A small mailroom desk
+A small office cubicle
+A small reception desk
+A small repair counter
+A small security station
+A small shipping counter
+A small side alley stall
+A small snack bar counter
+A small storage nook
+A small studio corner
+A small supply station
+A small ticket window
+A small training room desk
+A small waiting room
+A small workbench
+A stationery shop card aisle
+A storage closet
+A subway platform bench
+A tailor’s fitting stand
+A tattoo station
+A teacher’s desk
+A theme park lost‑and‑found desk
+A thrift store donation desk
+A ticket booth
+A tiny archive room table
+A tiny coat check station
+A tiny front desk
+A tiny garden patio
+A tiny kitchen corner
+A tiny lobby corner
+A tiny mailroom desk
+A tiny office cubicle
+A tiny reception desk
+A tiny repair counter
+A tiny security station
+A tiny shipping counter
+A tiny side alley stall
+A tiny snack bar counter
+A tiny storage nook
+A tiny studio corner
+A tiny supply station
+A tiny ticket window
+A tiny training room desk
+A tiny waiting room
+A tiny workbench
+A toll booth
+A toy store demo table
+A train conductor cabin
+A vet exam room
+A wine tasting table
+A yoga studio check‑in desk
+An acupuncture room
+An airport check‑in kiosk
+An arcade change counter
+An art studio table
+An emergency radio booth
+An empty archive room table
+An empty coat check station
+An empty front desk
+An empty garden patio
+An empty kitchen corner
+An empty lobby corner
+An empty mailroom desk
+An empty office cubicle
+An empty reception desk
+An empty repair counter
+An empty security station
+An empty shipping counter
+An empty side alley stall
+An empty snack bar counter
+An empty storage nook
+An empty studio corner
+An empty supply station
+An empty ticket window
+An empty training room desk
+An empty waiting room
+An empty workbench
+An ice cream counter
+An observatory telescope platform
+An old archive room table
+An old coat check station
+An old front desk
+An old garden patio
+An old kitchen corner
+An old lobby corner
+An old mailroom desk
+An old office cubicle
+An old reception desk
+An old repair counter
+An old security station
+An old shipping counter
+An old side alley stall
+An old snack bar counter
+An old storage nook
+An old studio corner
+An old supply station
+An old ticket window
+An old training room desk
+An old waiting room
+An old workbench
+An urgent care intake desk

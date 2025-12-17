@@ -1,0 +1,21 @@
+{
+  "warmups" : [
+    {
+      "zip zap zop" : {
+        "playerNum" : "any",
+        "length" : "2 to 4 minutes",
+        "wordRequired" : "no",
+        "rules" : "players stand in a circle. one person stops by pointing to another and saying 'ZIP!'. Then that person points to another and says 'ZAP!'. Then that person points to another and says 'ZOP!'. then the cycle continues until time is up. players should maintain eye contact with the person they are zapping/being zapped by."
+
+      }
+    },
+    {
+      "keep the thing" : {
+        "playerNum": "any",
+        "length": "2 to 4 minutes",
+        "wordRequired" : "no",
+        "rules": "players stand in a circle. one player starts by entering the middle of the circle and declaring themselves to be some 'thing'. then another player enters the circle and declares themselves to be some ting related to the first thing. a third player enters the circle and declares themselves to be a third related thing. finally, someone who is not in the middle says 'keep the ...' and then chooses one of the 3 things to stay in the middle. that person stays in the middle, the other two go back to the cicrle, and then 2 more people come in to the circle and declare themselves to be things related to the kept thing. this process repeats until the time is up."
+      }
+    }
+  ]
+}

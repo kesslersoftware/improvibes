@@ -1,0 +1,7 @@
+for this project, any configurable constants that I ask you to make
+should go into src/styles/Constants.js. there is a utility file called
+src/componentns/screenDimensionUtility.js that defines:
+sw = the screen width
+sh = the screen height
+all styling information goes into the file src/styles/SharedStyles.js
+when ready ask me "What is my next task?"

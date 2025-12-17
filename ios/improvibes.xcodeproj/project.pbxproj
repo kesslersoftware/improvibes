@@ -11,6 +11,20 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		265F6A381FEB42A88B9B38CA /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DFBBC4B67804E4896DD8889 /* FredokaOne-Regular.ttf */; };
+		E989A6DC562F42E9A264EE16 /* adjectives.txt in Resources */ = {isa = PBXBuildFile; fileRef = D5E95F5531C1471088EE3A5D /* adjectives.txt */; };
+		77C60A403B6C4E4F9908DB5C /* adverbs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3E7F7CA04731431D83B4A09B /* adverbs.txt */; };
+		E01FF30AFF384E9D849FB926 /* allwords.txt in Resources */ = {isa = PBXBuildFile; fileRef = 27968ECD2E794132A845DA9D /* allwords.txt */; };
+		AEAD3BF300B94CA7A010ED29 /* clean.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5AB3729368DA480D86EB0240 /* clean.txt */; };
+		661093B2D09A45289239C6BE /* conjunctions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F112D9A1AC3477F82F34BF7 /* conjunctions.txt */; };
+		28E264F8B83F4D178F9B33E6 /* dirty.txt in Resources */ = {isa = PBXBuildFile; fileRef = DD7B1C9EF2F14091A3F06CFD /* dirty.txt */; };
+		DB54CB2B406548EB99D20700 /* interjections.txt in Resources */ = {isa = PBXBuildFile; fileRef = FCBA8B2436C24FF79B76FEC8 /* interjections.txt */; };
+		CF174D7A76F4405C845E1AD8 /* leftovers.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE5DFBD75F9642D68A9F1B83 /* leftovers.txt */; };
+		49CC0040409D499F83A62E53 /* nouns.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7D5AB775770F4B0EA52C8E79 /* nouns.txt */; };
+		7FC9FD91EDED4D309BA10368 /* prepositions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 25801E7A9C764450A680D211 /* prepositions.txt */; };
+		3AF0E196A56A4AEFB01F0113 /* verbs.txt in Resources */ = {isa = PBXBuildFile; fileRef = C664B8DFA76446EBBFD1D5E3 /* verbs.txt */; };
+		8269F9138A974C4798F17D7C /* cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 57A73400D18C492DAAA6610C /* cities.txt */; };
+		B669F6449A5547D68E515746 /* improv_locations_small.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A3E83109040A4AFC9F2BB /* improv_locations_small.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +38,20 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = improvibes/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = improvibes/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		2DFBBC4B67804E4896DD8889 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; name = "FredokaOne-Regular.ttf"; path = "../assets/fonts/FredokaOne-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D5E95F5531C1471088EE3A5D /* adjectives.txt */ = {isa = PBXFileReference; name = "adjectives.txt"; path = "../assets/words/adjectives.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3E7F7CA04731431D83B4A09B /* adverbs.txt */ = {isa = PBXFileReference; name = "adverbs.txt"; path = "../assets/words/adverbs.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		27968ECD2E794132A845DA9D /* allwords.txt */ = {isa = PBXFileReference; name = "allwords.txt"; path = "../assets/words/allwords.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5AB3729368DA480D86EB0240 /* clean.txt */ = {isa = PBXFileReference; name = "clean.txt"; path = "../assets/words/clean.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4F112D9A1AC3477F82F34BF7 /* conjunctions.txt */ = {isa = PBXFileReference; name = "conjunctions.txt"; path = "../assets/words/conjunctions.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DD7B1C9EF2F14091A3F06CFD /* dirty.txt */ = {isa = PBXFileReference; name = "dirty.txt"; path = "../assets/words/dirty.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FCBA8B2436C24FF79B76FEC8 /* interjections.txt */ = {isa = PBXFileReference; name = "interjections.txt"; path = "../assets/words/interjections.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FE5DFBD75F9642D68A9F1B83 /* leftovers.txt */ = {isa = PBXFileReference; name = "leftovers.txt"; path = "../assets/words/leftovers.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7D5AB775770F4B0EA52C8E79 /* nouns.txt */ = {isa = PBXFileReference; name = "nouns.txt"; path = "../assets/words/nouns.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		25801E7A9C764450A680D211 /* prepositions.txt */ = {isa = PBXFileReference; name = "prepositions.txt"; path = "../assets/words/prepositions.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C664B8DFA76446EBBFD1D5E3 /* verbs.txt */ = {isa = PBXFileReference; name = "verbs.txt"; path = "../assets/words/verbs.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		57A73400D18C492DAAA6610C /* cities.txt */ = {isa = PBXFileReference; name = "cities.txt"; path = "../assets/locations/cities.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9C1A3E83109040A4AFC9F2BB /* improv_locations_small.txt */ = {isa = PBXFileReference; name = "improv_locations_small.txt"; path = "../assets/locations/improv_locations_small.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +102,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				998AF4875DED4098BB84BCB7 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -96,6 +125,28 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		998AF4875DED4098BB84BCB7 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				2DFBBC4B67804E4896DD8889 /* FredokaOne-Regular.ttf */,
+				D5E95F5531C1471088EE3A5D /* adjectives.txt */,
+				3E7F7CA04731431D83B4A09B /* adverbs.txt */,
+				27968ECD2E794132A845DA9D /* allwords.txt */,
+				5AB3729368DA480D86EB0240 /* clean.txt */,
+				4F112D9A1AC3477F82F34BF7 /* conjunctions.txt */,
+				DD7B1C9EF2F14091A3F06CFD /* dirty.txt */,
+				FCBA8B2436C24FF79B76FEC8 /* interjections.txt */,
+				FE5DFBD75F9642D68A9F1B83 /* leftovers.txt */,
+				7D5AB775770F4B0EA52C8E79 /* nouns.txt */,
+				25801E7A9C764450A680D211 /* prepositions.txt */,
+				C664B8DFA76446EBBFD1D5E3 /* verbs.txt */,
+				57A73400D18C492DAAA6610C /* cities.txt */,
+				9C1A3E83109040A4AFC9F2BB /* improv_locations_small.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -159,6 +210,20 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				265F6A381FEB42A88B9B38CA /* FredokaOne-Regular.ttf in Resources */,
+				E989A6DC562F42E9A264EE16 /* adjectives.txt in Resources */,
+				77C60A403B6C4E4F9908DB5C /* adverbs.txt in Resources */,
+				E01FF30AFF384E9D849FB926 /* allwords.txt in Resources */,
+				AEAD3BF300B94CA7A010ED29 /* clean.txt in Resources */,
+				661093B2D09A45289239C6BE /* conjunctions.txt in Resources */,
+				28E264F8B83F4D178F9B33E6 /* dirty.txt in Resources */,
+				DB54CB2B406548EB99D20700 /* interjections.txt in Resources */,
+				CF174D7A76F4405C845E1AD8 /* leftovers.txt in Resources */,
+				49CC0040409D499F83A62E53 /* nouns.txt in Resources */,
+				7FC9FD91EDED4D309BA10368 /* prepositions.txt in Resources */,
+				3AF0E196A56A4AEFB01F0113 /* verbs.txt in Resources */,
+				8269F9138A974C4798F17D7C /* cities.txt in Resources */,
+				B669F6449A5547D68E515746 /* improv_locations_small.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
