@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { sharedStyles } from "../../styles/SharedStyles";
 import { View, Text, TouchableOpacity, Animated } from "react-native";
-import BorderWrapper from '../../components/BorderWrapper';
+import BorderWrapper from '../../components/BorderWrapper/BorderWrapper.tsx';
 import { LOADING, HOME_SCREEN } from '../../styles/Constants';
 import { sh } from '../../components/ScreenDimensionUtility';
 

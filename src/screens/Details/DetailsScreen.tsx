@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { sharedStyles } from "../../styles/SharedStyles";
 import { View, Text, TouchableOpacity, ScrollView } from "react-native";
-import BorderWrapper from '../../components/BorderWrapper';
+import BorderWrapper from '../../components/BorderWrapper/BorderWrapper.tsx';
 import BackButton from '../../components/BackButton';
 import { getRandomWord } from '../../utils/wordUtils';
 import { DETAILS_SCREEN } from '../../styles/Constants';

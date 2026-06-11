@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../../App';
-import BorderWrapper from '../../components/BorderWrapper';
+import BorderWrapper from '../../components/BorderWrapper/BorderWrapper.tsx';
 import { sharedStyles} from "../../styles/SharedStyles";
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;

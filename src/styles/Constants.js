@@ -1,5 +1,7 @@
 // Color Scheme
 export const COLORS = {
+  WHITE: '#FFFFFF',
+  BLACK: '#000000',
   OUTER_BORDER: '#ff3399',
   INNER_BORDER: '#ffcc00',
   DEFAULT_BG: '#99ccff',
@@ -27,8 +29,11 @@ export const COLORS = {
   GEN_BTN_TXT: '#6600cc',
   GAMES_SCREEN_BG: '#ccffff',
   TIMER_PG_TXT: '#6600cc',
+  BODY_TEXT_DARK: '#212121'
 }
-
+export const FONTS = {
+    FONT1: 'FredokaOne-Regular'
+}
 // Border Widths (as percentages)
 export const BORDER_WIDTHS = {
   OUTER_BORDER_PERCENT: 0.02,  // 2% of screen width
@@ -254,3 +259,20 @@ export const TIMER_SCREEN = {
   DETAILS_BTN_SECTION_HEIGHT: 0.20,  // 20% of screen height for button area
   DETAILS_BTN_BOTTOM_MARGIN: 0.02,   // 2% margin from bottom
 }
+
+export const ABOUT_SCREEN = {
+
+}
+
+export const INSTRUCTIONS_SCREEN = {
+
+}
+
+export const COLORS_SCREEN = {
+
+}
+// Hamburger Menu Switches
+export const HOME_SWITCH = true;
+export const ABOUT_US_SWITCH = true;
+export const INSTRUCTIONS_SWITCH = true;
+export const COLORS_SWITCH = true;

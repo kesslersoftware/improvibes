@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { sharedStyles } from "../../styles/SharedStyles";
 import { View, Text, TouchableOpacity } from "react-native";
-import BorderWrapper from '../../components/BorderWrapper';
+import BorderWrapper from '../../components/BorderWrapper/BorderWrapper.tsx';
 import BackButton from '../../components/BackButton';
 import { LOADING, JAM_SCREEN } from '../../styles/Constants';
 

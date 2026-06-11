@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { topInset, bottomInset, sw, sh } from '../components/ScreenDimensionUtility';
-import { COLORS, BORDER_WIDTHS, LOADING, START_SCREEN, HOME_SCREEN, SHOW_SCREEN, JAM_SCREEN, GAMES_SCREEN, WARMUPS_SCREEN, DETAILS_SCREEN, TIMER_SCREEN } from './Constants';
+import {topInset, paddingTop,bottomInset, sw, sh} from '../components/ScreenDimensionUtility';
+import { COLORS, FONTS, BORDER_WIDTHS, LOADING, START_SCREEN, HOME_SCREEN, SHOW_SCREEN, JAM_SCREEN, GAMES_SCREEN, WARMUPS_SCREEN, DETAILS_SCREEN, TIMER_SCREEN } from './Constants';
 
 export const sharedStyles = StyleSheet.create({
   // Outer border container
@@ -22,7 +22,64 @@ export const sharedStyles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.MAIN_SCREEN_BG,
   },
+    headerBar: {
+        width: sw * 0.9540,
+        marginLeft: sw * 0.0240,
+        marginTop: paddingTop,
+        borderRadius: 20,
+        height: sh * 0.0340 * 2,
+        backgroundColor: '#FFFFFF',
+        justifyContent: 'center',
+        alignItems: 'center',  // Added: centers children horizontally
+    },
 
+    hamburgerButton: {
+        position: 'absolute',
+        left: sw * 0.03,
+        padding: sw * 0.01,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    titleText: {
+        textAlign: 'center',
+        fontSize: sh * 0.0262,
+        fontFamily: 'Inter',
+        fontWeight: '700',
+        color: BODY_TEXT_DARK,
+        // Removed: width and marginLeft (now centered by parent flexbox)
+    },
+    hamburgerContainer: {
+        flex: 1,
+        backgroundColor: COLORS.WHITE,
+    },
+    hamburgerHeader: {
+        paddingTop: sh * 0.06,
+        paddingBottom: sh * 0.02,
+        paddingHorizontal: sw * 0.05,
+        backgroundColor: '#007AFF',
+        borderBottomWidth: 1,
+        borderBottomColor: '#E0E0E0',
+    },
+    hamburgerHeaderText: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: COLORS.WHITE,
+    },
+    hamburgerMenuContainer: {
+        flex: 1,
+        paddingTop: sh * 0.01,
+    },
+    hamburgerMenuItem: {
+        paddingVertical: sh * 0.02,
+        paddingHorizontal: sw * 0.05,
+        borderBottomWidth: 1,
+        borderBottomColor: '#F0F0F0',
+    },
+    hamburgerMenuItemText: {
+        fontSize: 16,
+        color: '#333333',
+    },
   // StartScreen styles
   startScreenContainer: {
     flex: 1,
@@ -40,7 +97,7 @@ export const sharedStyles = StyleSheet.create({
 
   welcomeWord: {
     fontSize: sw * 0.2,
-    fontFamily: 'FredokaOne-Regular',
+    fontFamily: FONTS.FONT1,
     color: COLORS.START_SCREEN_TXT,
     textShadowColor: 'rgba(0, 0, 0, 0.5)',
     textShadowOffset: { width: 3, height: 3 },
@@ -49,7 +106,7 @@ export const sharedStyles = StyleSheet.create({
   },
     welcomeWordName: {
         fontSize: sw * 0.12,
-        fontFamily: 'FredokaOne-Regular',
+        fontFamily: FONTS.FONT1,
         color: COLORS.START_SCREEN_TXT,
         textShadowColor: 'rgba(0, 0, 0, 0.5)',
         textShadowOffset: { width: 3, height: 3 },
@@ -792,13 +849,6 @@ export const sharedStyles = StyleSheet.create({
     borderColor: COLORS.DETAILS_WRD_BTN_OUT_BRDR,
   },
 
-  gameButtonText: {
-    fontSize: sw * 0.045,
-    fontWeight: '700',
-    color: COLORS.DETAILS_WRD_BTN_TXT,
-    textAlign: 'center',
-  },
-
   // Make word button (section 3b)
   makeWordButton: {
     height: sh * DETAILS_SCREEN.SECTION_3B_HEIGHT * DETAILS_SCREEN.MAKE_WORD_BTN_HEIGHT_PERCENT,
@@ -872,7 +922,7 @@ export const sharedStyles = StyleSheet.create({
     fontWeight: '900',
     color: COLORS.TIMER_PG_TXT,
     textAlign: 'center',
-    fontFamily: 'FredokaOne-Regular',
+    fontFamily: FONTS.FONT1,
   },
 
   flagContainer: {
