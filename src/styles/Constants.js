@@ -49,7 +49,7 @@ export const LOADING = {
 // StartScreen Dimensions (as percentages)
 export const START_SCREEN = {
   MESSAGE_WIDTH_PERCENT: 0.98,   // 98% of inner container width
-  MESSAGE_HEIGHT_PERCENT: 0.60,  // 60% of inner container height
+  MESSAGE_HEIGHT_PERCENT: 0.30,  // 30% of inner container height
   BUTTON_DIAMETER_PERCENT: 0.20, // 20% of inner container height
 }
 
@@ -151,7 +151,7 @@ export const GAMES_SCREEN = {
   SECTION_2_HEIGHT: 0.14,          // 14% - Dropdown selector + random button
   SECTION_3_HEIGHT: 0.06,          // 6% - Number of players
   SECTION_4_HEIGHT: 0.06,          // 6% - Length of game
-  SECTION_5_HEIGHT: 0.35,          // 35% - Rules textarea (increased for scrollable content)
+  SECTION_5_HEIGHT: 0.315,         // 31.5% - Rules textarea (~10% reduction)
   SECTION_6_HEIGHT: 0.12,          // 12% - "let's play!" button
   SECTION_7_HEIGHT: 0.12,          // 12% - Loading section
   BOTTOM_BTN_HEIGHT: 0.10,         // 10% - "Back to Jam!" button
@@ -205,14 +205,14 @@ export const WARMUPS_SCREEN = {
 // DetailsScreen Dimensions (as percentages)
 export const DETAILS_SCREEN = {
   // Section heights
-  SECTION_1_HEIGHT: 0.09,   // 9% - number of people
-  SECTION_2_HEIGHT: 0.09,   // 9% - length of scene
-  SECTION_3_HEIGHT: 0.30,   // 30% - word choices
-  SECTION_3B_HEIGHT: 0.09,  // 9% - make a word button
-  SECTION_3C_HEIGHT: 0.10,  // 10% - word display
-  SECTION_4_HEIGHT: 0.06,   // 6% - OR text
-  SECTION_5_HEIGHT: 0.06,   // 6% - game button
-  SECTION_6_HEIGHT: 0.21,   // 21% - start button
+  SECTION_1_HEIGHT: 0.07,   // 7% - number of people
+  SECTION_2_HEIGHT: 0.07,   // 7% - length of scene
+  SECTION_3_HEIGHT: 0.29,   // 29% - word choices (needs room for 6-button grid)
+  SECTION_3B_HEIGHT: 0.07,  // 7% - make a word button
+  SECTION_3C_HEIGHT: 0.08,  // 8% - word display
+  SECTION_4_HEIGHT: 0.04,   // 4% - OR text
+  SECTION_5_HEIGHT: 0.04,   // 4% - game button
+  SECTION_6_HEIGHT: 0.16,   // 16% - start button
 
   // Button dimensions
   TIME_BTN_HEIGHT_PERCENT: 0.6,  // 70% of section height
@@ -239,7 +239,7 @@ export const DETAILS_SCREEN = {
   GAME_BTN_WIDTH_PERCENT: 0.60,   // 60% of screen width
   GAME_BTN_BORDER_RADIUS: 0.03,   // 3% of screen width
 
-  START_BTN_SIZE_PERCENT: 0.18,   // 18% of screen height (for round button)
+  START_BTN_SIZE_PERCENT: 0.16,   // 16% of screen height (10% smaller)
 
   OR_TEXT_SIZE: 0.08,             // 8% of screen width
 }
@@ -247,7 +247,7 @@ export const DETAILS_SCREEN = {
 export const TIMER_SCREEN = {
   // Timer display
   TIMER_TEXT_SIZE: 0.25,          // 25% of screen width for timer text
-  TIMER_SECTION_HEIGHT: 0.70,     // 70% of screen height for timer area
+  TIMER_SECTION_HEIGHT: 0.55,     // 55% of screen height for timer area (shifts back button up)
 
   TIMER_SCREEN_GAME_LOGO: 'Begin!',
   // Flag animation

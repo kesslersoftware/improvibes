@@ -4,6 +4,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../../App';
 import BorderWrapper from '../../components/BorderWrapper/BorderWrapper.tsx';
 import { sharedStyles} from "../../styles/SharedStyles";
+import { sh } from '../../components/ScreenDimensionUtility';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
@@ -13,8 +14,8 @@ interface Props {
 
 export default function StartScreen({ navigation }: Props) {
     return (
-        <BorderWrapper>
-            <View style={sharedStyles.startScreenContainer}>
+        <BorderWrapper showHamburger={false}>
+            <View style={[sharedStyles.startScreenContainer, { justifyContent: 'flex-start', paddingTop: sh * 0.08 }]}>
                 <View style={sharedStyles.welcomeMessageContainer}>
                     <Text style={[sharedStyles.welcomeWord, { transform: [{ rotate: '-3deg' }] }]}>
                         Welcome
@@ -28,7 +29,7 @@ export default function StartScreen({ navigation }: Props) {
                 </View>
 
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('Home')}
+                    onPress={() => navigation.replace('Home')}
                     activeOpacity={0.8}
                 >
                     <View style={sharedStyles.buttonOuterBorder}>

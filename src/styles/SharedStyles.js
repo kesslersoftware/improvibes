@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import {topInset, paddingTop,bottomInset, sw, sh} from '../components/ScreenDimensionUtility';
-import { COLORS, FONTS, BORDER_WIDTHS, LOADING, START_SCREEN, HOME_SCREEN, SHOW_SCREEN, JAM_SCREEN, GAMES_SCREEN, WARMUPS_SCREEN, DETAILS_SCREEN, TIMER_SCREEN } from './Constants';
+import { COLORS, FONTS, BORDER_WIDTHS, LOADING, START_SCREEN, HOME_SCREEN, SHOW_SCREEN, JAM_SCREEN, GAMES_SCREEN,
+    WARMUPS_SCREEN, DETAILS_SCREEN, TIMER_SCREEN } from './Constants';
 
 export const sharedStyles = StyleSheet.create({
   // Outer border container
@@ -46,7 +47,7 @@ export const sharedStyles = StyleSheet.create({
         fontSize: sh * 0.0262,
         fontFamily: 'Inter',
         fontWeight: '700',
-        color: BODY_TEXT_DARK,
+        color: COLORS.BODY_TEXT_DARK,
         // Removed: width and marginLeft (now centered by parent flexbox)
     },
     hamburgerContainer: {
@@ -502,7 +503,7 @@ export const sharedStyles = StyleSheet.create({
   gameSection3: {
     height: sh * GAMES_SCREEN.SECTION_3_HEIGHT,
     width: '100%',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'flex-start',
     paddingHorizontal: sw * GAMES_SCREEN.HORIZONTAL_PADDING,
   },
@@ -526,7 +527,7 @@ export const sharedStyles = StyleSheet.create({
   gameSection6: {
     height: sh * GAMES_SCREEN.SECTION_6_HEIGHT,
     width: '100%',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
   },
 
@@ -710,7 +711,7 @@ export const sharedStyles = StyleSheet.create({
   detailsSection3b: {
     height: sh * DETAILS_SCREEN.SECTION_3B_HEIGHT,
     width: '100%',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
   },
 
@@ -870,6 +871,7 @@ export const sharedStyles = StyleSheet.create({
     fontWeight: '700',
     color: COLORS.GEN_BTN_TXT,
     textAlign: 'center',
+    includeFontPadding: false,
   },
 
   // Word display (section 3c)
