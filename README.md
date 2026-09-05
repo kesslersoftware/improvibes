@@ -25,6 +25,7 @@ and use one of the following commands to build and run your Android or iOS app:
 
 ### Android
 
+# might need to run this: adb reverse tcp:8081 tcp:8081
 ```sh
 # Using npm
 npm run android

@@ -5,12 +5,13 @@ import HeaderBar from "../headerBar/HeaderBar.tsx";
 
 interface BorderWrapperProps {
   children: React.ReactNode;
+  showHamburger?: boolean;
 }
 
-export default function BorderWrapper({ children }: BorderWrapperProps) {
+export default function BorderWrapper({ children, showHamburger = true }: BorderWrapperProps) {
   return (
-      <View>
-        <HeaderBar/>
+      <View style={{ flex: 1 }}>
+        <HeaderBar display={showHamburger}/>
         <View style={sharedStyles.outerBorder}>
           <View style={sharedStyles.innerBorder}>
             <View style={sharedStyles.mainContent}>

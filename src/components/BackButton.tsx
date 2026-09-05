@@ -5,11 +5,16 @@ import { sharedStyles } from '../styles/SharedStyles';
 interface BackButtonProps {
     navigation: any;
     text: string;
+    onPress?: () => void;
 }
 
-export default function BackButton({ navigation, text }: BackButtonProps) {
+export default function BackButton({ navigation, text, onPress }: BackButtonProps) {
     const handlePress = () => {
-        navigation.goBack();
+        if (onPress) {
+            onPress();
+        } else {
+            navigation.goBack();
+        }
     };
 
     return (

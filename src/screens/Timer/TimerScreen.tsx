@@ -16,9 +16,18 @@ export default function TimerScreen({ route, navigation }: any) {
     const teams = route?.params?.teams;
     const duration = route?.params?.duration;
     const sceneLength = route?.params?.sceneLength;
+    const fromScreen = route?.params?.fromScreen;
 
     // Scenario #1: Teams mode (from ShowScreen)
     const isTeamsMode = teams !== undefined && duration !== undefined;
+
+    const handleBack = () => {
+        if (isTeamsMode) navigation.popTo('Show');
+        else if (fromScreen === 'Warmups') navigation.popTo('Warmups');
+        else navigation.popTo('Game');
+    };
+
+    const backButtonLabel = isTeamsMode ? 'Back to Show' : fromScreen === 'Warmups' ? 'Back to Warmups' : 'Back to Games';
 
     // Scenario #2: Single scene mode (from DetailsScreen)
     const timerDuration = isTeamsMode ? duration : sceneLength || 5;
@@ -155,7 +164,7 @@ export default function TimerScreen({ route, navigation }: any) {
                 )}
 
                 {/* Back Button Section */}
-                <BackButton navigation={navigation} text="HOME" />
+                <BackButton navigation={navigation} text={backButtonLabel} onPress={handleBack} />
             </View>
         </BorderWrapper>
     );

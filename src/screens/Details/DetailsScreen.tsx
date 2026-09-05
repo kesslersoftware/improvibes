@@ -49,7 +49,7 @@ export default function DetailsScreen({ navigation }: any) {
 
         const handleStartPress = () => {
             if (selectedLength && displayedWord && displayedWord !== '...' && displayedWord !== 'Error') {
-                navigation.navigate('Timer', {sceneLength: selectedLength});
+                navigation.navigate('Timer', {sceneLength: selectedLength, fromScreen: 'Game'});
             }
         };
 
@@ -163,7 +163,7 @@ export default function DetailsScreen({ navigation }: any) {
                         </TouchableOpacity>
                     </View>
                     {/* Bottom button: Back to Home */}
-                    <BackButton navigation={navigation} text="Back to Home!" />
+                    <BackButton navigation={navigation} text="Back to Game!" />
                 </ScrollView>
             </BorderWrapper>
         );

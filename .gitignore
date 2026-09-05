@@ -76,3 +76,6 @@ yarn-error.log
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Local secrets (see src/config.example.ts for the required shape)
+src/config.ts
