@@ -2,6 +2,20 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 > For Play Store publishing instructions, see `C:\Users\dylan\Desktop\business\publishing_to_stores\Android\publishing_to_playstore.txt`.
 
+## Secrets & keys to back up (outside of git)
+
+- [ ] Back up `android/app/improvlab-release.keystore` somewhere durable (password manager attachment, encrypted archive, secure cloud storage). This file cannot be regenerated — losing it means never being able to publish an update to this app again.
+- [ ] Save the keystore passwords (`IMPROVLAB_STORE_PASSWORD`, `IMPROVLAB_KEY_PASSWORD` env vars) and key alias (`improvlab`) in a password manager.
+- [ ] Save the Google Sheets API key and Sheet ID (currently in the gitignored `src/config.ts`) in a password manager, or note where to regenerate the key (Google Cloud Console project on the business Google account).
+- [ ] Confirm whether the store password and key password are actually different values, and record both accurately.
+- [ ] Note which Google account (personal vs. organization) owns the Play Console listing, and who else has publishing access.
+
+## Setup on a new machine
+
+- [ ] Restore `improvlab-release.keystore` into `android/app/`.
+- [ ] Set `IMPROVLAB_STORE_PASSWORD` and `IMPROVLAB_KEY_PASSWORD` environment variables.
+- [ ] Copy `src/config.example.ts` to `src/config.ts` and fill in the real API key + Sheet ID.
+
 # Getting Started
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
