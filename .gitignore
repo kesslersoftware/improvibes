@@ -79,3 +79,4 @@ yarn-error.log
 
 # Local secrets (see src/config.example.ts for the required shape)
 src/config.ts
+publishing_to_playstore.txt
