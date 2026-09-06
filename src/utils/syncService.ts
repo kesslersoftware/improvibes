@@ -1,5 +1,6 @@
 import RNFS from 'react-native-fs';
-import { GOOGLE_SHEETS_API_KEY, SHEET_ID, TABS } from '../config';
+import { SHEET_ID, TABS } from '../config';
+import { GOOGLE_SHEETS_API_KEY } from './keys';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
