@@ -8,6 +8,7 @@ import {
     ABOUT_US_SWITCH,
     INSTRUCTIONS_SWITCH,
     COLORS_SWITCH,
+    CONFIGURE_JAMS_SWITCH,
 } from "../../styles/Constants";
 import { syncAll } from '../../utils/syncService';
 
@@ -33,6 +34,7 @@ const Hamburger = ({ navigation, onClose }: HamburgerProps) => {
         { label: 'About Us', screen: 'About', enabled: ABOUT_US_SWITCH },
         { label: 'Instructions', screen: 'Instructions', enabled: INSTRUCTIONS_SWITCH },
         { label: 'Color Scheme', screen: 'Colors', enabled: COLORS_SWITCH },
+        { label: 'Configure Jams', screen: 'ConfigureJams', enabled: CONFIGURE_JAMS_SWITCH },
     ];
 
     const handleNavigate = (screen: keyof RootStackParamList) => {

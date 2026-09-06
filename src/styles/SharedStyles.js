@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import {topInset, paddingTop,bottomInset, sw, sh} from '../components/ScreenDimensionUtility';
 import { COLORS, FONTS, BORDER_WIDTHS, LOADING, START_SCREEN, HOME_SCREEN, SHOW_SCREEN, JAM_SCREEN, GAMES_SCREEN,
-    WARMUPS_SCREEN, DETAILS_SCREEN, TIMER_SCREEN } from './Constants';
+    WARMUPS_SCREEN, DETAILS_SCREEN, TIMER_SCREEN, CONFIGURE_JAMS_SCREEN } from './Constants';
 
 export const sharedStyles = StyleSheet.create({
   // Outer border container
@@ -450,6 +450,64 @@ export const sharedStyles = StyleSheet.create({
 
   jamButtonText: {
     fontSize: sw * JAM_SCREEN.BTN_TEXT_SIZE,
+    fontWeight: '700',
+    color: COLORS.DETAILS_WRD_BTN_TXT,
+  },
+
+  configureJamsSection1: {
+    height: sh * CONFIGURE_JAMS_SCREEN.SECTION_1_HEIGHT,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  configureJamsSection2: {
+    height: sh * CONFIGURE_JAMS_SCREEN.SECTION_2_HEIGHT,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  configureJamsSection3: {
+    height: sh * CONFIGURE_JAMS_SCREEN.SECTION_3_HEIGHT,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  configureJamsHeaderText: {
+    fontSize: sw * CONFIGURE_JAMS_SCREEN.HEADER_TEXT_SIZE,
+    fontWeight: '700',
+    color: COLORS.DEFAULT_TEXT,
+    textAlign: 'center',
+  },
+
+  // Configure Jams button with double border (centered)
+  configureJamsButtonOuter: {
+    height: sh * CONFIGURE_JAMS_SCREEN.SECTION_2_HEIGHT * CONFIGURE_JAMS_SCREEN.BTN_HEIGHT_PERCENT,
+    width: sw * CONFIGURE_JAMS_SCREEN.BTN_WIDTH_PERCENT,
+    borderRadius: sw * CONFIGURE_JAMS_SCREEN.BTN_BORDER_RADIUS,
+    borderWidth: CONFIGURE_JAMS_SCREEN.BTN_OUTER_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_OUT_BRDR,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: sw * 0.000,
+    paddingVertical: sh * 0.000,
+  },
+
+  configureJamsButtonInner: {
+    flex: 1,
+    width: '100%',
+    borderRadius: sw * CONFIGURE_JAMS_SCREEN.BTN_BORDER_RADIUS * 0.7,
+    borderWidth: CONFIGURE_JAMS_SCREEN.BTN_INNER_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_IN_BRDR,
+    backgroundColor: COLORS.DETAILS_WRD_BTN_BG,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  configureJamsButtonText: {
+    fontSize: sw * CONFIGURE_JAMS_SCREEN.BTN_TEXT_SIZE,
     fontWeight: '700',
     color: COLORS.DETAILS_WRD_BTN_TXT,
   },

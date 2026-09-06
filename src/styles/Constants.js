@@ -145,6 +145,24 @@ export const JAM_SCREEN = {
   HEADER_TEXT_SIZE: 0.08,          // 8% of screen width
 }
 
+export const CONFIGURE_JAMS_SCREEN = {
+  // Section heights
+  SECTION_1_HEIGHT: 0.15,          // 15% - header
+  SECTION_2_HEIGHT: 0.12,          // 12% - Start New Jam button
+  SECTION_3_HEIGHT: 0.12,          // 12% - Load Saved Jam button
+
+  // Button dimensions (reuse JAM_SCREEN values)
+  BTN_OUTER_BORDER_WIDTH: 6,       // Outer border width in px
+  BTN_INNER_BORDER_WIDTH: 6,       // Inner border width in px
+  BTN_HEIGHT_PERCENT: 0.65,        // 65% of section height
+  BTN_WIDTH_PERCENT: 0.70,         // 70% of screen width (centered button)
+  BTN_BORDER_RADIUS: 0.03,         // 3% of screen width
+  BTN_TEXT_SIZE: 0.055,            // 5.5% of screen width
+
+  // Text sizes
+  HEADER_TEXT_SIZE: 0.08,          // 8% of screen width
+}
+
 export const GAMES_SCREEN = {
   // Section heights
   SECTION_1_HEIGHT: 0.10,          // 10% - Header text
@@ -276,3 +294,4 @@ export const HOME_SWITCH = true;
 export const ABOUT_US_SWITCH = true;
 export const INSTRUCTIONS_SWITCH = true;
 export const COLORS_SWITCH = true;
+export const CONFIGURE_JAMS_SWITCH = true;
