@@ -4,6 +4,6 @@ export const SHEET_ID = '1p3OW5xV5j6L6yNnx8VZqHrQVSwHqnsbk221_sjcV31I';
 export const TABS = {
     OUR_GAMES:   'our_games',
     JAM_GAMES:   'jam_games',
-    SHOW_LINEUP: 'show_lineup',
+    TEAMS: 'teams',
     REGULARS:    'regulars',
 } as const;
