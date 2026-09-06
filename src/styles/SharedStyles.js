@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import {topInset, paddingTop,bottomInset, sw, sh} from '../components/ScreenDimensionUtility';
 import { COLORS, FONTS, BORDER_WIDTHS, LOADING, START_SCREEN, HOME_SCREEN, SHOW_SCREEN, JAM_SCREEN, GAMES_SCREEN,
-    WARMUPS_SCREEN, DETAILS_SCREEN, TIMER_SCREEN, CONFIGURE_JAMS_SCREEN } from './Constants';
+    WARMUPS_SCREEN, DETAILS_SCREEN, TIMER_SCREEN, CONFIGURE_JAMS_SCREEN, FIND_JAM_CONFIG_SCREEN } from './Constants';
 
 export const sharedStyles = StyleSheet.create({
   // Outer border container
@@ -508,6 +508,82 @@ export const sharedStyles = StyleSheet.create({
 
   configureJamsButtonText: {
     fontSize: sw * CONFIGURE_JAMS_SCREEN.BTN_TEXT_SIZE,
+    fontWeight: '700',
+    color: COLORS.DETAILS_WRD_BTN_TXT,
+  },
+
+  findJamSection1: {
+    height: sh * FIND_JAM_CONFIG_SCREEN.SECTION_1_HEIGHT,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  findJamSection2: {
+    height: sh * FIND_JAM_CONFIG_SCREEN.SECTION_2_HEIGHT,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  findJamSection3: {
+    height: sh * FIND_JAM_CONFIG_SCREEN.SECTION_3_HEIGHT,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  findJamHeaderText: {
+    fontSize: sw * FIND_JAM_CONFIG_SCREEN.HEADER_TEXT_SIZE,
+    fontWeight: '700',
+    color: COLORS.DEFAULT_TEXT,
+    textAlign: 'center',
+  },
+
+  // Dropdown picker
+  findJamDropdown: {
+    width: sw * FIND_JAM_CONFIG_SCREEN.DROPDOWN_WIDTH_PERCENT,
+    height: sh * FIND_JAM_CONFIG_SCREEN.SECTION_2_HEIGHT * FIND_JAM_CONFIG_SCREEN.DROPDOWN_HEIGHT_PERCENT,
+    borderRadius: sw * FIND_JAM_CONFIG_SCREEN.DROPDOWN_BORDER_RADIUS,
+    borderWidth: FIND_JAM_CONFIG_SCREEN.DROPDOWN_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_OUT_BRDR,
+    backgroundColor: COLORS.DETAILS_WRD_BTN_BG,
+    justifyContent: 'center',
+    paddingHorizontal: sw * 0.03,
+  },
+
+  findJamDropdownText: {
+    fontSize: sw * FIND_JAM_CONFIG_SCREEN.DROPDOWN_TEXT_SIZE,
+    fontWeight: '600',
+    color: COLORS.DETAILS_WRD_BTN_TXT,
+  },
+
+  // "Use This Jam" button with double border (centered)
+  findJamButtonOuter: {
+    height: sh * FIND_JAM_CONFIG_SCREEN.SECTION_3_HEIGHT * FIND_JAM_CONFIG_SCREEN.BTN_HEIGHT_PERCENT,
+    width: sw * FIND_JAM_CONFIG_SCREEN.BTN_WIDTH_PERCENT,
+    borderRadius: sw * FIND_JAM_CONFIG_SCREEN.BTN_BORDER_RADIUS,
+    borderWidth: FIND_JAM_CONFIG_SCREEN.BTN_OUTER_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_OUT_BRDR,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: sw * 0.000,
+    paddingVertical: sh * 0.000,
+  },
+
+  findJamButtonInner: {
+    flex: 1,
+    width: '100%',
+    borderRadius: sw * FIND_JAM_CONFIG_SCREEN.BTN_BORDER_RADIUS * 0.7,
+    borderWidth: FIND_JAM_CONFIG_SCREEN.BTN_INNER_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_IN_BRDR,
+    backgroundColor: COLORS.DETAILS_WRD_BTN_BG,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  findJamButtonText: {
+    fontSize: sw * FIND_JAM_CONFIG_SCREEN.BTN_TEXT_SIZE,
     fontWeight: '700',
     color: COLORS.DETAILS_WRD_BTN_TXT,
   },

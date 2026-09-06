@@ -163,6 +163,31 @@ export const CONFIGURE_JAMS_SCREEN = {
   HEADER_TEXT_SIZE: 0.08,          // 8% of screen width
 }
 
+export const FIND_JAM_CONFIG_SCREEN = {
+  // Section heights
+  SECTION_1_HEIGHT: 0.15,          // 15% - header
+  SECTION_2_HEIGHT: 0.14,          // 14% - dropdown selector
+  SECTION_3_HEIGHT: 0.12,          // 12% - "Use This Jam" button
+
+  // Dropdown dimensions (reuse GAMES_SCREEN values)
+  DROPDOWN_WIDTH_PERCENT: 0.80,    // 80% of screen width
+  DROPDOWN_HEIGHT_PERCENT: 0.35,   // 35% of section height
+  DROPDOWN_BORDER_RADIUS: 0.02,    // 2% of screen width
+  DROPDOWN_BORDER_WIDTH: 2,        // 2px border
+  DROPDOWN_TEXT_SIZE: 0.04,        // 4% of screen width
+
+  // Button dimensions (reuse CONFIGURE_JAMS_SCREEN values)
+  BTN_OUTER_BORDER_WIDTH: 6,       // Outer border width in px
+  BTN_INNER_BORDER_WIDTH: 6,       // Inner border width in px
+  BTN_HEIGHT_PERCENT: 0.65,        // 65% of section height
+  BTN_WIDTH_PERCENT: 0.70,         // 70% of screen width (centered button)
+  BTN_BORDER_RADIUS: 0.03,         // 3% of screen width
+  BTN_TEXT_SIZE: 0.055,            // 5.5% of screen width
+
+  // Text sizes
+  HEADER_TEXT_SIZE: 0.08,          // 8% of screen width
+}
+
 export const GAMES_SCREEN = {
   // Section heights
   SECTION_1_HEIGHT: 0.10,          // 10% - Header text

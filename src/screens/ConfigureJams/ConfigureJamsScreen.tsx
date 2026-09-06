@@ -2,15 +2,23 @@ import BorderWrapper from "../../components/BorderWrapper/BorderWrapper.tsx";
 import {sharedStyles} from "../../styles/SharedStyles";
 import {View, Text, TouchableOpacity} from "react-native";
 import BackButton from "../../components/BackButton.tsx";
-import React from "react";
+import React, {useEffect, useState} from "react";
+import {listSavedJams, syncAll} from "../../utils/syncService";
 
 export default function ConfigureJamsScreen({ navigation }: any) {
+    const [hasSavedJams, setHasSavedJams] = useState(false);
+
+    useEffect(() => {
+        syncAll();
+        listSavedJams().then(jams => setHasSavedJams(jams.length > 0));
+    }, []);
+
     const handleStartNew = () => {
-        // TODO: begin a new jam configuration
+        navigation.navigate('EditJamConfiguration', {});
     };
 
     const handleLoadExisting = () => {
-        // TODO: list saved jam configurations (listSavedJams) and load the selected one
+        navigation.navigate('FindJamConfiguration');
     };
 
     return (
@@ -28,13 +36,15 @@ export default function ConfigureJamsScreen({ navigation }: any) {
                     </TouchableOpacity>
                 </View>
 
-                <View style={sharedStyles.configureJamsSection3}>
-                    <TouchableOpacity style={sharedStyles.configureJamsButtonOuter} onPress={handleLoadExisting}>
-                        <View style={sharedStyles.configureJamsButtonInner}>
-                            <Text style={sharedStyles.configureJamsButtonText}>Load Saved Jam</Text>
-                        </View>
-                    </TouchableOpacity>
-                </View>
+                {hasSavedJams && (
+                    <View style={sharedStyles.configureJamsSection3}>
+                        <TouchableOpacity style={sharedStyles.configureJamsButtonOuter} onPress={handleLoadExisting}>
+                            <View style={sharedStyles.configureJamsButtonInner}>
+                                <Text style={sharedStyles.configureJamsButtonText}>Load Saved Jam</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+                )}
 
                 {/* Discards any in-progress changes and returns to Home (not just goBack) */}
                 <BackButton
