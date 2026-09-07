@@ -150,6 +150,7 @@ export const CONFIGURE_JAMS_SCREEN = {
   SECTION_1_HEIGHT: 0.15,          // 15% - header
   SECTION_2_HEIGHT: 0.12,          // 12% - Start New Jam button
   SECTION_3_HEIGHT: 0.12,          // 12% - Load Saved Jam button
+  SECTION_4_HEIGHT: 0.12,          // 12% - Delete/Rename Jam button
 
   // Button dimensions (reuse JAM_SCREEN values)
   BTN_OUTER_BORDER_WIDTH: 6,       // Outer border width in px

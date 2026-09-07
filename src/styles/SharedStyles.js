@@ -475,6 +475,13 @@ export const sharedStyles = StyleSheet.create({
     alignItems: 'center',
   },
 
+  configureJamsSection4: {
+    height: sh * CONFIGURE_JAMS_SCREEN.SECTION_4_HEIGHT,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   configureJamsHeaderText: {
     fontSize: sw * CONFIGURE_JAMS_SCREEN.HEADER_TEXT_SIZE,
     fontWeight: '700',
@@ -569,6 +576,7 @@ export const sharedStyles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: sw * 0.000,
     paddingVertical: sh * 0.000,
+    marginVertical: sh * 0.015,
   },
 
   findJamButtonInner: {

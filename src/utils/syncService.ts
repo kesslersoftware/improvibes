@@ -235,6 +235,15 @@ export async function deleteSavedJam(name: string) {
     if (await RNFS.exists(path)) await RNFS.unlink(path);
 }
 
+export async function renameSavedJam(oldName: string, newName: string) {
+    await ensureDirs();
+    const oldPath = `${PATHS.JAMS_DIR}/${oldName}.json`;
+    const newPath = `${PATHS.JAMS_DIR}/${newName}.json`;
+    if (await RNFS.exists(oldPath)) {
+        await RNFS.moveFile(oldPath, newPath);
+    }
+}
+
 export async function deleteSavedShow(name: string) {
     const path = `${PATHS.SHOWS_DIR}/${name}.json`;
     if (await RNFS.exists(path)) await RNFS.unlink(path);

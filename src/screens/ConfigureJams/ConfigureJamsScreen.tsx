@@ -18,7 +18,11 @@ export default function ConfigureJamsScreen({ navigation }: any) {
     };
 
     const handleLoadExisting = () => {
-        navigation.navigate('FindJamConfiguration');
+        navigation.navigate('FindJamConfiguration', { mode: 'use' });
+    };
+
+    const handleDeleteRename = () => {
+        navigation.navigate('FindJamConfiguration', { mode: 'delete_rename' });
     };
 
     return (
@@ -41,6 +45,16 @@ export default function ConfigureJamsScreen({ navigation }: any) {
                         <TouchableOpacity style={sharedStyles.configureJamsButtonOuter} onPress={handleLoadExisting}>
                             <View style={sharedStyles.configureJamsButtonInner}>
                                 <Text style={sharedStyles.configureJamsButtonText}>Load Saved Jam</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+                )}
+
+                {hasSavedJams && (
+                    <View style={sharedStyles.configureJamsSection4}>
+                        <TouchableOpacity style={sharedStyles.configureJamsButtonOuter} onPress={handleDeleteRename}>
+                            <View style={sharedStyles.configureJamsButtonInner}>
+                                <Text style={sharedStyles.configureJamsButtonText}>Delete/Rename Jam</Text>
                             </View>
                         </TouchableOpacity>
                     </View>

@@ -30,7 +30,7 @@ export type RootStackParamList = {
   Instructions: undefined;
   Colors: undefined;
   ConfigureJams: undefined;
-  FindJamConfiguration: undefined;
+  FindJamConfiguration: { mode?: 'use' | 'delete_rename' };
   JamConfigWizard: { name?: string };
 };
 
