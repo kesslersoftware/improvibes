@@ -16,7 +16,7 @@ export default function FindJamConfigurationScreen({ navigation }: any) {
 
     const handleUseThisJam = () => {
         if (!selectedJam) return;
-        navigation.navigate('EditJamConfiguration', { name: selectedJam });
+        navigation.navigate('JamConfigWizard', { name: selectedJam });
     };
 
     return (

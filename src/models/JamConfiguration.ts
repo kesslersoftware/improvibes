@@ -24,20 +24,23 @@ export interface TeamSetsConfig {
                                                  // adjusted at jam time based on actual attendance per team
 }
 
-// One entry in the host-configured, ordered sequence of the jam.
+// One entry in the host-configured, ordered sequence of the jam. Every kind
+// carries its own planned `minutes` so the sequence table can render one
+// column regardless of kind. The mashup is just the last entry in the
+// sequence, not a separate concept.
 export type PlannedItem =
-    | { kind: 'game' }
-    | { kind: 'scene' }
-    | { kind: 'set'; teamName: string };
+    | { kind: 'game'; gameName: string; minutes: number }
+    | { kind: 'scene'; minutes: number }
+    | { kind: 'set'; teamName: string; minutes: number }
+    | { kind: 'mashup'; minutes: number };
 
 export interface JamConfiguration {
     totalMinutes: number;
     transitionMinutes: number;   // gap time budgeted between consecutive items
     estimatedAttendees: number;  // estimate used to compute how many scenes are needed
     timePerScene: number;        // planned minutes for any single scene
-    endsWithMashup: boolean;     // whether leftover time (if any) is reserved for a mashup at the end
     teamSets: TeamSetsConfig;
-    order: PlannedItem[];        // the host-configured sequence, front to back
+    order: PlannedItem[];        // the host-configured sequence, front to back, ending in a 'mashup' entry once finished
 }
 
 // ─── Live jam (created when a configuration is loaded to actually start) ─────
@@ -50,19 +53,14 @@ interface ItemTimingBase {
 
 // One entry per item in JamConfiguration.order, same order, same length.
 export type PlannedItemTiming =
-    | ({ kind: 'game' } & ItemTimingBase)
-    | ({ kind: 'scene' } & ItemTimingBase)
-    | ({ kind: 'set'; teamName: string } & ItemTimingBase);
-
-export interface MashupSectionTiming {
-    // no planned minutes: mashup runs on whatever time remains once totalMinutes elapses
-    overall: TimeSpan;
-}
+    | ({ kind: 'game'; gameName: string; minutes: number } & ItemTimingBase)
+    | ({ kind: 'scene'; minutes: number } & ItemTimingBase)
+    | ({ kind: 'set'; teamName: string; minutes: number } & ItemTimingBase)
+    | ({ kind: 'mashup'; minutes: number } & ItemTimingBase);
 
 export interface JamTiming {
     overall: TimeSpan;           // the continuously-running jam-wide timer; starts once, stops once, at jam end
     items: PlannedItemTiming[];  // mirrors config.order
-    mashup: MashupSectionTiming; // only used if endsWithMashup was chosen, or time remains at the end
 }
 
 export interface ActiveJam {

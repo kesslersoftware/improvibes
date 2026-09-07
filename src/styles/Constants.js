@@ -188,6 +188,44 @@ export const FIND_JAM_CONFIG_SCREEN = {
   HEADER_TEXT_SIZE: 0.08,          // 8% of screen width
 }
 
+// Shared across all 4 JamConfigWizard screens (ConfigureAggregates, TeamSelect,
+// ConfigureSequence, FinalConfigurationDetails) — one generic set of building
+// blocks (header, form field, action button, list row) rather than a
+// per-screen block, since the visual language is identical across all four.
+export const WIZARD_SCREEN = {
+  HEADER_TEXT_SIZE: 0.07,
+  SUBHEADER_TEXT_SIZE: 0.045,
+
+  FIELD_WIDTH_PERCENT: 0.8,
+  FIELD_HEIGHT_PERCENT: 0.065,     // % of sh
+  FIELD_BORDER_RADIUS: 0.02,
+  FIELD_BORDER_WIDTH: 2,
+  FIELD_LABEL_TEXT_SIZE: 0.04,
+  FIELD_INPUT_TEXT_SIZE: 0.05,
+
+  BTN_HEIGHT_PERCENT: 0.07,        // % of sh
+  BTN_WIDTH_PERCENT: 0.7,          // % of sw
+  BTN_BORDER_RADIUS: 0.03,
+  BTN_OUTER_BORDER_WIDTH: 6,
+  BTN_INNER_BORDER_WIDTH: 6,
+  BTN_TEXT_SIZE: 0.05,
+
+  SMALL_BTN_HEIGHT_PERCENT: 0.06,  // % of sh
+  SMALL_BTN_WIDTH_PERCENT: 0.28,   // % of sw
+  SMALL_BTN_TEXT_SIZE: 0.035,
+
+  DROPDOWN_WIDTH_PERCENT: 0.8,
+  DROPDOWN_HEIGHT_PERCENT: 0.06,   // % of sh
+  DROPDOWN_TEXT_SIZE: 0.04,
+
+  LIST_ITEM_HEIGHT_PERCENT: 0.07,  // % of sh
+  LIST_ITEM_TEXT_SIZE: 0.045,
+  ICON_TEXT_SIZE: 0.05,
+
+  ERROR_TEXT_SIZE: 0.045,
+  SUMMARY_TEXT_SIZE: 0.04,
+}
+
 export const GAMES_SCREEN = {
   // Section heights
   SECTION_1_HEIGHT: 0.10,          // 10% - Header text

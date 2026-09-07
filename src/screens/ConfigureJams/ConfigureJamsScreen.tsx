@@ -14,7 +14,7 @@ export default function ConfigureJamsScreen({ navigation }: any) {
     }, []);
 
     const handleStartNew = () => {
-        navigation.navigate('EditJamConfiguration', {});
+        navigation.navigate('JamConfigWizard', {});
     };
 
     const handleLoadExisting = () => {
