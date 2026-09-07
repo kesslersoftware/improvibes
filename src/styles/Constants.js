@@ -145,6 +145,87 @@ export const JAM_SCREEN = {
   HEADER_TEXT_SIZE: 0.08,          // 8% of screen width
 }
 
+export const CONFIGURE_JAMS_SCREEN = {
+  // Section heights
+  SECTION_1_HEIGHT: 0.15,          // 15% - header
+  SECTION_2_HEIGHT: 0.12,          // 12% - Start New Jam button
+  SECTION_3_HEIGHT: 0.12,          // 12% - Load Saved Jam button
+
+  // Button dimensions (reuse JAM_SCREEN values)
+  BTN_OUTER_BORDER_WIDTH: 6,       // Outer border width in px
+  BTN_INNER_BORDER_WIDTH: 6,       // Inner border width in px
+  BTN_HEIGHT_PERCENT: 0.65,        // 65% of section height
+  BTN_WIDTH_PERCENT: 0.70,         // 70% of screen width (centered button)
+  BTN_BORDER_RADIUS: 0.03,         // 3% of screen width
+  BTN_TEXT_SIZE: 0.055,            // 5.5% of screen width
+
+  // Text sizes
+  HEADER_TEXT_SIZE: 0.08,          // 8% of screen width
+}
+
+export const FIND_JAM_CONFIG_SCREEN = {
+  // Section heights
+  SECTION_1_HEIGHT: 0.15,          // 15% - header
+  SECTION_2_HEIGHT: 0.14,          // 14% - dropdown selector
+  SECTION_3_HEIGHT: 0.12,          // 12% - "Use This Jam" button
+
+  // Dropdown dimensions (reuse GAMES_SCREEN values)
+  DROPDOWN_WIDTH_PERCENT: 0.80,    // 80% of screen width
+  DROPDOWN_HEIGHT_PERCENT: 0.35,   // 35% of section height
+  DROPDOWN_BORDER_RADIUS: 0.02,    // 2% of screen width
+  DROPDOWN_BORDER_WIDTH: 2,        // 2px border
+  DROPDOWN_TEXT_SIZE: 0.04,        // 4% of screen width
+
+  // Button dimensions (reuse CONFIGURE_JAMS_SCREEN values)
+  BTN_OUTER_BORDER_WIDTH: 6,       // Outer border width in px
+  BTN_INNER_BORDER_WIDTH: 6,       // Inner border width in px
+  BTN_HEIGHT_PERCENT: 0.65,        // 65% of section height
+  BTN_WIDTH_PERCENT: 0.70,         // 70% of screen width (centered button)
+  BTN_BORDER_RADIUS: 0.03,         // 3% of screen width
+  BTN_TEXT_SIZE: 0.055,            // 5.5% of screen width
+
+  // Text sizes
+  HEADER_TEXT_SIZE: 0.08,          // 8% of screen width
+}
+
+// Shared across all 4 JamConfigWizard screens (ConfigureAggregates, TeamSelect,
+// ConfigureSequence, FinalConfigurationDetails) — one generic set of building
+// blocks (header, form field, action button, list row) rather than a
+// per-screen block, since the visual language is identical across all four.
+export const WIZARD_SCREEN = {
+  HEADER_TEXT_SIZE: 0.07,
+  SUBHEADER_TEXT_SIZE: 0.045,
+
+  FIELD_WIDTH_PERCENT: 0.8,
+  FIELD_HEIGHT_PERCENT: 0.065,     // % of sh
+  FIELD_BORDER_RADIUS: 0.02,
+  FIELD_BORDER_WIDTH: 2,
+  FIELD_LABEL_TEXT_SIZE: 0.04,
+  FIELD_INPUT_TEXT_SIZE: 0.05,
+
+  BTN_HEIGHT_PERCENT: 0.07,        // % of sh
+  BTN_WIDTH_PERCENT: 0.7,          // % of sw
+  BTN_BORDER_RADIUS: 0.03,
+  BTN_OUTER_BORDER_WIDTH: 6,
+  BTN_INNER_BORDER_WIDTH: 6,
+  BTN_TEXT_SIZE: 0.05,
+
+  SMALL_BTN_HEIGHT_PERCENT: 0.06,  // % of sh
+  SMALL_BTN_WIDTH_PERCENT: 0.28,   // % of sw
+  SMALL_BTN_TEXT_SIZE: 0.035,
+
+  DROPDOWN_WIDTH_PERCENT: 0.8,
+  DROPDOWN_HEIGHT_PERCENT: 0.06,   // % of sh
+  DROPDOWN_TEXT_SIZE: 0.04,
+
+  LIST_ITEM_HEIGHT_PERCENT: 0.07,  // % of sh
+  LIST_ITEM_TEXT_SIZE: 0.045,
+  ICON_TEXT_SIZE: 0.05,
+
+  ERROR_TEXT_SIZE: 0.045,
+  SUMMARY_TEXT_SIZE: 0.04,
+}
+
 export const GAMES_SCREEN = {
   // Section heights
   SECTION_1_HEIGHT: 0.10,          // 10% - Header text
@@ -276,3 +357,4 @@ export const HOME_SWITCH = true;
 export const ABOUT_US_SWITCH = true;
 export const INSTRUCTIONS_SWITCH = true;
 export const COLORS_SWITCH = true;
+export const CONFIGURE_JAMS_SWITCH = true;

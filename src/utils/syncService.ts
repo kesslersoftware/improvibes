@@ -1,5 +1,7 @@
 import RNFS from 'react-native-fs';
-import { GOOGLE_SHEETS_API_KEY, SHEET_ID, TABS } from '../config';
+import { SHEET_ID, TABS } from '../config';
+import { GOOGLE_SHEETS_API_KEY } from './keys';
+import { JamConfiguration } from '../models/JamConfiguration';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -23,6 +25,11 @@ export interface ShowTeam {
 
 export type ShowData = ShowTeam[];
 
+export interface Team {
+    teamName: string;
+    members: string[];
+}
+
 export interface Regular {
     first: string;
     lastletter: string;
@@ -43,7 +50,7 @@ const PATHS = {
     JAMS_DIR:     `${ROOT}/jams`,
     SHOWS_DIR:    `${ROOT}/shows`,
     JAM_GAMES:    `${ROOT}/jams/jam_games.json`,
-    SHOW_LINEUP:  `${ROOT}/shows/show_lineup.json`,
+    TEAMS:  `${ROOT}/shows/teams.json`,
 };
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -83,6 +90,22 @@ function rowsToObjects<T>(rows: string[][]): T[] {
             headers.forEach((h, i) => { obj[h] = row[i]?.trim() ?? ''; });
             return obj as T;
         });
+}
+
+// First row = team names, one per column. Remaining rows = one member name
+// per cell, in that team's column. Columns are ragged (teams have different
+// roster sizes), so empty cells below a shorter roster are skipped.
+function columnsToTeams(rows: string[][]): Team[] {
+    if (rows.length < 1) return [];
+    const [header, ...memberRows] = rows;
+    return header
+        .map((teamName, col) => ({
+            teamName: teamName?.trim() ?? '',
+            members: memberRows
+                .map(row => row[col]?.trim())
+                .filter((name): name is string => !!name),
+        }))
+        .filter(team => team.teamName);
 }
 
 async function writeJson(path: string, data: unknown) {
@@ -130,15 +153,12 @@ export async function syncJamGames(): Promise<SyncResult> {
     }
 }
 
-export async function syncShowLineup(): Promise<SyncResult> {
+export async function syncTeams(): Promise<SyncResult> {
     try {
         await ensureDirs();
-        const rows = await fetchTab(TABS.SHOW_LINEUP, 'A:B');
-        const teams = rowsToObjects<ShowTeam>(rows).map(t => ({
-            team_name: t.team_name,
-            set_length: Number(t.set_length) || 0,
-        }));
-        await writeJson(PATHS.SHOW_LINEUP, teams);
+        const rows = await fetchTab(TABS.TEAMS, 'A:Z');
+        const teams = columnsToTeams(rows);
+        await writeJson(PATHS.TEAMS, teams);
         return { success: true, count: teams.length };
     } catch (e: any) {
         return { success: false, error: e.message };
@@ -160,7 +180,7 @@ export async function syncAll(): Promise<Record<string, SyncResult>> {
     const [ourGames, jamGames, showLineup, regulars] = await Promise.all([
         syncOurGames(),
         syncJamGames(),
-        syncShowLineup(),
+        syncTeams(),
         syncRegulars(),
     ]);
     return { ourGames, jamGames, showLineup, regulars };
@@ -170,12 +190,12 @@ export async function syncAll(): Promise<Record<string, SyncResult>> {
 
 export const loadOurGames   = () => readJson<Game[]>(PATHS.OUR_GAMES);
 export const loadJamGames   = () => readJson<JamData>(PATHS.JAM_GAMES);
-export const loadShowLineup = () => readJson<ShowData>(PATHS.SHOW_LINEUP);
+export const loadShowLineup = () => readJson<Team[]>(PATHS.TEAMS);
 export const loadRegulars   = () => readJson<Regular[]>(PATHS.REGULARS);
 
 // ─── Save / Load User-Configured Jams & Shows ─────────────────────────────────
 
-export async function saveJam(name: string, data: JamData) {
+export async function saveJam(name: string, data: JamConfiguration) {
     await ensureDirs();
     await writeJson(`${PATHS.JAMS_DIR}/${name}.json`, data);
 }
@@ -185,8 +205,8 @@ export async function saveShow(name: string, data: ShowData) {
     await writeJson(`${PATHS.SHOWS_DIR}/${name}.json`, data);
 }
 
-export async function loadSavedJam(name: string): Promise<JamData | null> {
-    return readJson<JamData>(`${PATHS.JAMS_DIR}/${name}.json`);
+export async function loadSavedJam(name: string): Promise<JamConfiguration | null> {
+    return readJson<JamConfiguration>(`${PATHS.JAMS_DIR}/${name}.json`);
 }
 
 export async function loadSavedShow(name: string): Promise<ShowData | null> {

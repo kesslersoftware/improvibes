@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import {topInset, paddingTop,bottomInset, sw, sh} from '../components/ScreenDimensionUtility';
 import { COLORS, FONTS, BORDER_WIDTHS, LOADING, START_SCREEN, HOME_SCREEN, SHOW_SCREEN, JAM_SCREEN, GAMES_SCREEN,
-    WARMUPS_SCREEN, DETAILS_SCREEN, TIMER_SCREEN } from './Constants';
+    WARMUPS_SCREEN, DETAILS_SCREEN, TIMER_SCREEN, CONFIGURE_JAMS_SCREEN, FIND_JAM_CONFIG_SCREEN, WIZARD_SCREEN } from './Constants';
 
 export const sharedStyles = StyleSheet.create({
   // Outer border container
@@ -454,11 +454,361 @@ export const sharedStyles = StyleSheet.create({
     color: COLORS.DETAILS_WRD_BTN_TXT,
   },
 
+  configureJamsSection1: {
+    height: sh * CONFIGURE_JAMS_SCREEN.SECTION_1_HEIGHT,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  configureJamsSection2: {
+    height: sh * CONFIGURE_JAMS_SCREEN.SECTION_2_HEIGHT,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  configureJamsSection3: {
+    height: sh * CONFIGURE_JAMS_SCREEN.SECTION_3_HEIGHT,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  configureJamsHeaderText: {
+    fontSize: sw * CONFIGURE_JAMS_SCREEN.HEADER_TEXT_SIZE,
+    fontWeight: '700',
+    color: COLORS.DEFAULT_TEXT,
+    textAlign: 'center',
+  },
+
+  // Configure Jams button with double border (centered)
+  configureJamsButtonOuter: {
+    height: sh * CONFIGURE_JAMS_SCREEN.SECTION_2_HEIGHT * CONFIGURE_JAMS_SCREEN.BTN_HEIGHT_PERCENT,
+    width: sw * CONFIGURE_JAMS_SCREEN.BTN_WIDTH_PERCENT,
+    borderRadius: sw * CONFIGURE_JAMS_SCREEN.BTN_BORDER_RADIUS,
+    borderWidth: CONFIGURE_JAMS_SCREEN.BTN_OUTER_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_OUT_BRDR,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: sw * 0.000,
+    paddingVertical: sh * 0.000,
+  },
+
+  configureJamsButtonInner: {
+    flex: 1,
+    width: '100%',
+    borderRadius: sw * CONFIGURE_JAMS_SCREEN.BTN_BORDER_RADIUS * 0.7,
+    borderWidth: CONFIGURE_JAMS_SCREEN.BTN_INNER_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_IN_BRDR,
+    backgroundColor: COLORS.DETAILS_WRD_BTN_BG,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  configureJamsButtonText: {
+    fontSize: sw * CONFIGURE_JAMS_SCREEN.BTN_TEXT_SIZE,
+    fontWeight: '700',
+    color: COLORS.DETAILS_WRD_BTN_TXT,
+  },
+
+  findJamSection1: {
+    height: sh * FIND_JAM_CONFIG_SCREEN.SECTION_1_HEIGHT,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  findJamSection2: {
+    height: sh * FIND_JAM_CONFIG_SCREEN.SECTION_2_HEIGHT,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  findJamSection3: {
+    height: sh * FIND_JAM_CONFIG_SCREEN.SECTION_3_HEIGHT,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  findJamHeaderText: {
+    fontSize: sw * FIND_JAM_CONFIG_SCREEN.HEADER_TEXT_SIZE,
+    fontWeight: '700',
+    color: COLORS.DEFAULT_TEXT,
+    textAlign: 'center',
+  },
+
+  // Dropdown picker
+  findJamDropdown: {
+    width: sw * FIND_JAM_CONFIG_SCREEN.DROPDOWN_WIDTH_PERCENT,
+    height: sh * FIND_JAM_CONFIG_SCREEN.SECTION_2_HEIGHT * FIND_JAM_CONFIG_SCREEN.DROPDOWN_HEIGHT_PERCENT,
+    borderRadius: sw * FIND_JAM_CONFIG_SCREEN.DROPDOWN_BORDER_RADIUS,
+    borderWidth: FIND_JAM_CONFIG_SCREEN.DROPDOWN_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_OUT_BRDR,
+    backgroundColor: COLORS.DETAILS_WRD_BTN_BG,
+    justifyContent: 'center',
+    paddingHorizontal: sw * 0.03,
+  },
+
+  findJamDropdownText: {
+    fontSize: sw * FIND_JAM_CONFIG_SCREEN.DROPDOWN_TEXT_SIZE,
+    fontWeight: '600',
+    color: COLORS.DETAILS_WRD_BTN_TXT,
+  },
+
+  // "Use This Jam" button with double border (centered)
+  findJamButtonOuter: {
+    height: sh * FIND_JAM_CONFIG_SCREEN.SECTION_3_HEIGHT * FIND_JAM_CONFIG_SCREEN.BTN_HEIGHT_PERCENT,
+    width: sw * FIND_JAM_CONFIG_SCREEN.BTN_WIDTH_PERCENT,
+    borderRadius: sw * FIND_JAM_CONFIG_SCREEN.BTN_BORDER_RADIUS,
+    borderWidth: FIND_JAM_CONFIG_SCREEN.BTN_OUTER_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_OUT_BRDR,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: sw * 0.000,
+    paddingVertical: sh * 0.000,
+  },
+
+  findJamButtonInner: {
+    flex: 1,
+    width: '100%',
+    borderRadius: sw * FIND_JAM_CONFIG_SCREEN.BTN_BORDER_RADIUS * 0.7,
+    borderWidth: FIND_JAM_CONFIG_SCREEN.BTN_INNER_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_IN_BRDR,
+    backgroundColor: COLORS.DETAILS_WRD_BTN_BG,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  findJamButtonText: {
+    fontSize: sw * FIND_JAM_CONFIG_SCREEN.BTN_TEXT_SIZE,
+    fontWeight: '700',
+    color: COLORS.DETAILS_WRD_BTN_TXT,
+  },
+
   jamLoadingText: {
     fontSize: sw * LOADING.LOADING_TEXT_SIZE,
     fontWeight: '700',
     color: COLORS.DETAILS_SCREEN_TXT,
     textAlign: 'center',
+  },
+
+  // ─── JamConfigWizard shared styles (used by all 4 wizard screens) ──────────
+
+  wizardContentContainer: {
+    flexGrow: 1,
+    width: '100%',
+    alignItems: 'center',
+    paddingVertical: sh * 0.02,
+  },
+
+  wizardHeaderText: {
+    fontSize: sw * WIZARD_SCREEN.HEADER_TEXT_SIZE,
+    fontWeight: '700',
+    color: COLORS.DEFAULT_TEXT,
+    textAlign: 'center',
+    marginVertical: sh * 0.015,
+  },
+
+  wizardSubHeaderText: {
+    fontSize: sw * WIZARD_SCREEN.SUBHEADER_TEXT_SIZE,
+    fontWeight: '600',
+    color: COLORS.DEFAULT_TEXT,
+    textAlign: 'center',
+    marginVertical: sh * 0.008,
+  },
+
+  wizardErrorText: {
+    fontSize: sw * WIZARD_SCREEN.ERROR_TEXT_SIZE,
+    fontWeight: '600',
+    color: '#cc0000',
+    textAlign: 'center',
+    marginVertical: sh * 0.01,
+    width: sw * 0.85,
+  },
+
+  wizardFieldContainer: {
+    width: sw * WIZARD_SCREEN.FIELD_WIDTH_PERCENT,
+    marginVertical: sh * 0.008,
+  },
+
+  wizardFieldLabel: {
+    fontSize: sw * WIZARD_SCREEN.FIELD_LABEL_TEXT_SIZE,
+    fontWeight: '600',
+    color: COLORS.DEFAULT_TEXT,
+    marginBottom: sh * 0.004,
+  },
+
+  wizardFieldInput: {
+    height: sh * WIZARD_SCREEN.FIELD_HEIGHT_PERCENT,
+    width: '100%',
+    borderRadius: sw * WIZARD_SCREEN.FIELD_BORDER_RADIUS,
+    borderWidth: WIZARD_SCREEN.FIELD_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_OUT_BRDR,
+    backgroundColor: COLORS.DETAILS_WRD_BTN_BG,
+    paddingHorizontal: sw * 0.03,
+    fontSize: sw * WIZARD_SCREEN.FIELD_INPUT_TEXT_SIZE,
+    color: COLORS.DEFAULT_TEXT,
+  },
+
+  // Primary action button with double border (centered) — "submit", "proceed", etc.
+  wizardButtonOuter: {
+    height: sh * WIZARD_SCREEN.BTN_HEIGHT_PERCENT,
+    width: sw * WIZARD_SCREEN.BTN_WIDTH_PERCENT,
+    borderRadius: sw * WIZARD_SCREEN.BTN_BORDER_RADIUS,
+    borderWidth: WIZARD_SCREEN.BTN_OUTER_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_OUT_BRDR,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: sh * 0.01,
+  },
+
+  wizardButtonOuterDisabled: {
+    opacity: 0.4,
+  },
+
+  wizardButtonInner: {
+    flex: 1,
+    width: '100%',
+    borderRadius: sw * WIZARD_SCREEN.BTN_BORDER_RADIUS * 0.7,
+    borderWidth: WIZARD_SCREEN.BTN_INNER_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_IN_BRDR,
+    backgroundColor: COLORS.DETAILS_WRD_BTN_BG,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  wizardButtonText: {
+    fontSize: sw * WIZARD_SCREEN.BTN_TEXT_SIZE,
+    fontWeight: '700',
+    color: COLORS.DETAILS_WRD_BTN_TXT,
+  },
+
+  // Small single-border buttons — "add scene" / "add game" / "add set" group
+  wizardButtonGroupRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    width: '100%',
+    marginVertical: sh * 0.015,
+  },
+
+  wizardSmallButton: {
+    height: sh * WIZARD_SCREEN.SMALL_BTN_HEIGHT_PERCENT,
+    width: sw * WIZARD_SCREEN.SMALL_BTN_WIDTH_PERCENT,
+    borderRadius: sw * WIZARD_SCREEN.BTN_BORDER_RADIUS,
+    borderWidth: WIZARD_SCREEN.BTN_INNER_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_OUT_BRDR,
+    backgroundColor: COLORS.DETAILS_WRD_BTN_BG,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  wizardSmallButtonDisabled: {
+    opacity: 0.4,
+  },
+
+  wizardSmallButtonText: {
+    fontSize: sw * WIZARD_SCREEN.SMALL_BTN_TEXT_SIZE,
+    fontWeight: '700',
+    color: COLORS.DETAILS_WRD_BTN_TXT,
+    textAlign: 'center',
+  },
+
+  // Dropdown picker (team select, game select)
+  wizardDropdown: {
+    width: sw * WIZARD_SCREEN.DROPDOWN_WIDTH_PERCENT,
+    height: sh * WIZARD_SCREEN.DROPDOWN_HEIGHT_PERCENT,
+    borderRadius: sw * WIZARD_SCREEN.FIELD_BORDER_RADIUS,
+    borderWidth: WIZARD_SCREEN.FIELD_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_OUT_BRDR,
+    backgroundColor: COLORS.DETAILS_WRD_BTN_BG,
+    justifyContent: 'center',
+    paddingHorizontal: sw * 0.03,
+    marginVertical: sh * 0.01,
+  },
+
+  wizardDropdownText: {
+    fontSize: sw * WIZARD_SCREEN.DROPDOWN_TEXT_SIZE,
+    color: COLORS.DEFAULT_TEXT,
+  },
+
+  // List rows — performing-teams list, jam-sequence table
+  wizardListRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: sw * 0.9,
+    minHeight: sh * WIZARD_SCREEN.LIST_ITEM_HEIGHT_PERCENT,
+    borderBottomWidth: 1,
+    borderBottomColor: COLORS.INNER_BORDER,
+    paddingHorizontal: sw * 0.02,
+  },
+
+  wizardListRowText: {
+    flex: 1,
+    fontSize: sw * WIZARD_SCREEN.LIST_ITEM_TEXT_SIZE,
+    color: COLORS.DEFAULT_TEXT,
+  },
+
+  wizardListRowMinutes: {
+    width: sw * 0.14,
+    fontSize: sw * WIZARD_SCREEN.LIST_ITEM_TEXT_SIZE,
+    color: COLORS.DEFAULT_TEXT,
+    textAlign: 'right',
+  },
+
+  wizardIconButton: {
+    width: sw * 0.09,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  wizardIconButtonDisabled: {
+    opacity: 0.3,
+  },
+
+  wizardIconText: {
+    fontSize: sw * WIZARD_SCREEN.ICON_TEXT_SIZE,
+  },
+
+  // Final-review summary sections
+  wizardSummarySection: {
+    width: sw * 0.9,
+    marginVertical: sh * 0.015,
+  },
+
+  wizardSummaryHeaderText: {
+    fontSize: sw * WIZARD_SCREEN.SUBHEADER_TEXT_SIZE,
+    fontWeight: '700',
+    color: COLORS.DEFAULT_TEXT,
+    marginBottom: sh * 0.006,
+  },
+
+  wizardSummaryLine: {
+    fontSize: sw * WIZARD_SCREEN.SUMMARY_TEXT_SIZE,
+    color: COLORS.DEFAULT_TEXT,
+    marginVertical: sh * 0.002,
+  },
+
+  // Cancel/Save footer row (reuses JAM_SCREEN's bottom-button sizing, two-up)
+  wizardFooterRow: {
+    height: sh * JAM_SCREEN.BOTTOM_BTN_HEIGHT,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+
+  wizardFooterButton: {
+    height: sh * JAM_SCREEN.BOTTOM_BTN_HEIGHT * JAM_SCREEN.BOTTOM_BTN_HEIGHT_PERCENT,
+    width: sw * 0.42,
+    borderRadius: sw * JAM_SCREEN.BOTTOM_BTN_BORDER_RADIUS,
+    borderWidth: JAM_SCREEN.BOTTOM_BTN_BORDER_WIDTH,
+    borderColor: COLORS.DETAILS_WRD_BTN_OUT_BRDR,
+    backgroundColor: COLORS.DETAILS_WRD_BTN_BG,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   backButtonSection: {

@@ -13,6 +13,9 @@ import WarmupsScreen from "./src/screens/Warmups/WarmupsScreen.tsx";
 import AboutScreen from './src/screens/About/AboutScreen';
 import InstructionsScreen from './src/screens/Instructions/InstructionsScreen';
 import ColorsScreen from './src/screens/Colors/ColorsScreen';
+import ConfigureJamsScreen from './src/screens/ConfigureJams/ConfigureJamsScreen';
+import FindJamConfigurationScreen from './src/screens/ConfigureJams/FindJamConfigurationScreen';
+import JamConfigWizardNavigator from './src/screens/ConfigureJams/JamConfigWizardNavigator';
 
 export type RootStackParamList = {
   Start: undefined;
@@ -26,6 +29,9 @@ export type RootStackParamList = {
   About: undefined;
   Instructions: undefined;
   Colors: undefined;
+  ConfigureJams: undefined;
+  FindJamConfiguration: undefined;
+  JamConfigWizard: { name?: string };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -51,6 +57,9 @@ function App() {
           <Stack.Screen name="About" component={AboutScreen} />
           <Stack.Screen name="Instructions" component={InstructionsScreen} />
           <Stack.Screen name="Colors" component={ColorsScreen} />
+          <Stack.Screen name="ConfigureJams" component={ConfigureJamsScreen} />
+          <Stack.Screen name="FindJamConfiguration" component={FindJamConfigurationScreen} />
+          <Stack.Screen name="JamConfigWizard" component={JamConfigWizardNavigator} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
