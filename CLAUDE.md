@@ -50,6 +50,26 @@ WarmupsScreen → TimerScreen (warmup countdown)
 - **Teams mode**: `{ teams, duration }` from ShowScreen — cycles through teams
 - **Single scene mode**: `{ sceneLength }` from DetailsScreen or WarmupsScreen
 
+### Jam Configuration Workflow
+
+Reachable from the hamburger menu (`Configure Jams`, gated by `CONFIGURE_JAMS_SWITCH` in `Constants.js`). Lets a host build up a `JamConfiguration` (`src/models/JamConfiguration.ts`) — the planned aggregates, performing teams, and an ordered sequence of scenes/sets/games/mashup — ahead of running an actual jam.
+
+```
+ConfigureJamsScreen → "Start New Jam"   → JamConfigWizard (no name param, blank config created)
+ConfigureJamsScreen → "Load Saved Jam"  → FindJamConfigurationScreen → JamConfigWizard ({ name })
+```
+
+`JamConfigWizard` (`src/screens/ConfigureJams/JamConfigWizardNavigator.tsx`) is a nested stack navigator wrapped in `JamConfigDraftProvider` (`JamConfigDraftContext.tsx`), which loads-or-creates the `JamConfiguration` draft and exposes it via `useJamConfigDraft()` (`config`, `setConfig`, `configName`, `persist()`). Scoping the provider to the nested navigator means the draft — and any unsaved edits — is discarded automatically when the wizard unmounts (Cancel, or finishing).
+
+Four steps, all screens in `src/screens/ConfigureJams/`, every one prepopulated from the draft on load, all with a Cancel (discard, return Home) and — except the last — a Save (persist current draft, stay put) button:
+
+1. **`ConfigureAggregatesScreen`** — total jam length, estimated attendees, transition time → scenes needed; then scene length → validates there's enough time for scenes + transitions.
+2. **`TeamSelectScreen`** — pick performing teams (from the synced `TEAMS` tab, via `loadShowLineup()`) in performance order; then per-set length → validates there's enough time left for scenes + sets + transitions.
+3. **`ConfigureSequenceScreen`** — build the ordered event sequence (`config.order`): add scene/set/game, reorder, delete. "Add game" pulls from the synced `OUR_GAMES` tab. Finishing appends a trailing `mashup` entry with whatever time remains.
+4. **`FinalConfigurationDetailsScreen`** — review everything, then Save and Exit, Redo Something (back to step 1, keeping data), or Delete Configuration.
+
+All derived numbers (scenes remaining, time left for games, next team to schedule, etc.) are computed on the fly from the draft in `src/utils/jamConfigCalculations.ts` — nothing is duplicated in component state. Saved configs live under `jams/*.json` via `saveJam`/`loadSavedJam`/`listSavedJams`/`deleteSavedJam` (`src/utils/syncService.ts`).
+
 ### Styling System
 
 All styling follows a strict percentage-based responsive pattern:
